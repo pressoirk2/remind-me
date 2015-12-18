@@ -1,0 +1,25 @@
+<head>
+  <title>Reminders</title>
+</head>
+ 
+<body>
+  <div class="container">
+    <header>
+      <h1>Reminders</h1>
+
+       <form class="new-task">
+        <input type="text" name="text" placeholder="Type to add new tasks" />
+      </form>
+    </header>
+ 
+    <ul>
+      {{#each tasks}}
+        <li>{{this.text}}</li>
+      {{/each}}
+    </ul>
+  </div>
+</body>
+ 
+<template name="task">
+  <li>{{text}}</li>
+</template>
